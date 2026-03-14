@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free Online Tools – ToolHub</title>
+<title>ToolHub - Free Online Tools</title>
 
-<meta name="description" content="Free online calculators, PDF tools and image utilities.">
+<meta name="description" content="Free online calculators, PDF tools, and image tools.">
 
 <link rel="stylesheet" href="style.css">
 
@@ -19,15 +19,12 @@
 <header>
 
 <h1>ToolHub – Free Online Tools</h1>
-
-<p>Simple calculators, PDF tools and image tools</p>
-
-<!-- Search bar -->
+<p>Simple tools for everyday calculations and file tasks</p>
 
 <input 
-type="text" 
-id="toolSearch" 
-placeholder="Search tools..." 
+type="text"
+id="toolSearch"
+placeholder="Search tools..."
 onkeyup="searchTools()"
 >
 
@@ -44,7 +41,7 @@ onkeyup="searchTools()"
 
 </section>
 
-<!-- Tools -->
+<!-- Tools Grid -->
 
 <section class="tools" id="toolsList">
 
@@ -73,6 +70,16 @@ onkeyup="searchTools()"
 <p>Count words instantly</p>
 </a>
 
+<a href="tools/case-converter.html" class="tool-card calculator">
+<h2>Case Converter</h2>
+<p>Convert text to uppercase or lowercase</p>
+</a>
+
+<a href="tools/age-calculator.html" class="tool-card calculator">
+<h2>Age Calculator</h2>
+<p>Calculate age from date of birth</p>
+</a>
+
 <a href="tools/image-resizer.html" class="tool-card image">
 <h2>Image Resizer</h2>
 <p>Resize images online</p>
@@ -85,25 +92,38 @@ onkeyup="searchTools()"
 
 <a href="tools/merge-pdf.html" class="tool-card pdf">
 <h2>Merge PDF</h2>
-<p>Combine PDF files</p>
+<p>Combine multiple PDFs</p>
 </a>
 
 <a href="tools/compress-pdf.html" class="tool-card pdf">
 <h2>Compress PDF</h2>
-<p>Reduce PDF size</p>
+<p>Reduce PDF file size</p>
 </a>
+
+</section>
+
+<!-- Info Section -->
+
+<section>
+
+<h2>Popular Tools</h2>
+
+<p>
+Use our free GST calculator, EMI calculator, profit calculator,
+image compressor and PDF tools without installing any software.
+</p>
 
 </section>
 
 <footer>
 
-<p>© 2026 ToolHub</p>
+<p>© 2026 ToolHub | Free Online Tools</p>
 
 </footer>
 
 <script>
 
-/* SEARCH */
+/* SEARCH FUNCTION */
 
 function searchTools(){
 
@@ -121,7 +141,7 @@ card.style.display=text.includes(input)?"block":"none"
 
 }
 
-/* FILTER */
+/* FILTER FUNCTION */
 
 function filterTools(type){
 
@@ -129,7 +149,7 @@ let cards=document.querySelectorAll(".tool-card")
 
 cards.forEach(card=>{
 
-if(type=="all"||card.classList.contains(type)){
+if(type=="all" || card.classList.contains(type)){
 
 card.style.display="block"
 
