@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<a href="../index.html">⬅ Back to Home</a>
+<h2>Word Counter</h2>
+
+<textarea id="text" rows="10" cols="40"></textarea>
+
+<br><br>
+
+<button onclick="count()">Count</button>
+
+<p id="result"></p>
+
+<script>
+
+function count(){
+
+let text=document.getElementById("text").value
+
+let words=text.trim().split(/\s+/).length
+let characters=text.length
+
+document.getElementById("result").innerHTML=
+"Words: "+words+" | Characters: "+characters
+
+}
+
+</script>
+
+</body>
+</html>
