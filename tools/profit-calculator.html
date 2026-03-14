@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<a href="../index.html">⬅ Back to Home</a>
+<h2>Profit Calculator</h2>
+
+<input id="cost" placeholder="Cost Price">
+
+<input id="sell" placeholder="Selling Price">
+
+<button onclick="calc()">Calculate</button>
+
+<p id="result"></p>
+
+<script>
+
+function calc(){
+
+let cost=document.getElementById("cost").value
+let sell=document.getElementById("sell").value
+
+let profit=sell-cost
+let margin=(profit/cost)*100
+
+document.getElementById("result").innerHTML=
+"Profit = ₹"+profit+" | Margin = "+margin.toFixed(2)+"%"
+
+}
+
+</script>
+
+</body>
+</html>
