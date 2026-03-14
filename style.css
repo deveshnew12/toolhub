@@ -1,133 +1,26 @@
-/* RESET */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family: "Segoe UI", Arial, sans-serif;
+#toolSearch{
+margin-top:20px;
+padding:10px;
+width:280px;
+border-radius:6px;
+border:none;
 }
 
-/* BODY */
-
-body{
-background:#f4f7fb;
-color:#333;
-line-height:1.6;
+.categories{
+text-align:center;
+margin-top:20px;
 }
 
-/* HEADER */
-
-header{
-background:linear-gradient(135deg,#4e73df,#224abe);
+.categories button{
+padding:10px 15px;
+margin:5px;
+border:none;
+background:#4e73df;
 color:white;
-text-align:center;
-padding:60px 20px;
+border-radius:6px;
+cursor:pointer;
 }
 
-header h1{
-font-size:38px;
-margin-bottom:10px;
-}
-
-header p{
-font-size:18px;
-opacity:0.9;
-}
-
-/* TOOL GRID */
-
-.tools{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:25px;
-}
-
-/* TOOL CARD */
-
-.tool-card{
-background:white;
-padding:25px;
-border-radius:12px;
-text-decoration:none;
-color:#333;
-
-box-shadow:0 6px 18px rgba(0,0,0,0.08);
-transition:all 0.3s ease;
-}
-
-.tool-card:hover{
-transform:translateY(-6px);
-box-shadow:0 12px 30px rgba(0,0,0,0.15);
-}
-
-/* TOOL TITLE */
-
-.tool-card h2{
-font-size:20px;
-margin-bottom:8px;
-color:#4e73df;
-}
-
-/* TOOL DESCRIPTION */
-
-.tool-card p{
-font-size:14px;
-color:#666;
-}
-
-/* POPULAR TOOLS SECTION */
-
-section{
-margin-top:30px;
-padding:10px 20px;
-}
-
-section h2{
-text-align:center;
-font-size:26px;
-margin-bottom:10px;
-}
-
-section p{
-text-align:center;
-max-width:700px;
-margin:auto;
-color:#555;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:#bbb;
-text-align:center;
-padding:20px;
-margin-top:40px;
-font-size:14px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-header h1{
-font-size:28px;
-}
-
-header p{
-font-size:16px;
-}
-
-.tools{
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-}
-
-.tool-card{
-padding:18px;
-}
-
+.categories button:hover{
+background:#224abe;
 }
