@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Image Compressor</h1>
+
+<input type="file" id="image">
+
+<br><br>
+
+<button onclick="compress()">Compress</button>
+
+<br><br>
+
+<img id="preview" width="300">
+
+<script>
+
+function compress(){
+
+let file=document.getElementById("image").files[0]
+
+let reader=new FileReader()
+
+reader.onload=function(e){
+
+let img=new Image()
+
+img.onload=function(){
+
+let canvas=document.createElement("canvas")
+let ctx=canvas.getContext("2d")
+
+canvas.width=img.width
+canvas.height=img.height
+
+ctx.drawImage(img,0,0)
+
+let compressed=canvas.toDataURL("image/jpeg",0.5)
+
+document.getElementById("preview").src=compressed
+
+}
+
+img.src=e.target.result
+
+}
+
+reader.readAsDataURL(file)
+
+}
+
+</script>
+
+</body>
+</html>
