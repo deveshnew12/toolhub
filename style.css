@@ -1,28 +1,28 @@
-
 /* Reset */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Body */
 body{
-background:#f5f7fb;
+background:#f4f7fb;
 color:#333;
 }
 
 /* Header */
+
 header{
-text-align:center;
-padding:40px 20px;
-background:#2d6cdf;
+background:linear-gradient(135deg,#4e73df,#224abe);
 color:white;
+text-align:center;
+padding:60px 20px;
 }
 
 header h1{
-font-size:36px;
+font-size:40px;
 margin-bottom:10px;
 }
 
@@ -31,54 +31,60 @@ font-size:18px;
 opacity:0.9;
 }
 
-/* Tools Section */
+/* Tools Grid */
 
 .tools{
-max-width:1100px;
-margin:40px auto;
+max-width:1200px;
+margin:auto;
+padding:40px 20px;
+
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-padding:20px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
 }
 
 /* Tool Card */
 
 .tool-card{
 background:white;
-padding:20px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
 text-decoration:none;
 color:#333;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-transition:0.25s;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
 .tool-card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(0,0,0,0.15);
 }
 
-/* Card Titles */
+/* Tool Title */
 
 .tool-card h2{
 font-size:20px;
-margin-bottom:10px;
-color:#2d6cdf;
+margin-bottom:8px;
+color:#4e73df;
 }
 
-/* Card Text */
+/* Tool Text */
 
 .tool-card p{
 font-size:14px;
 color:#666;
 }
 
-/* Popular tools section */
+/* Popular section */
+
+section{
+margin-top:30px;
+}
 
 section h2{
 text-align:center;
-margin-top:40px;
+font-size:26px;
 margin-bottom:10px;
 }
 
@@ -86,18 +92,18 @@ section p{
 text-align:center;
 max-width:700px;
 margin:auto;
-color:#555;
 padding:10px;
+color:#555;
 }
 
 /* Footer */
 
 footer{
+background:#111;
+color:#bbb;
 text-align:center;
 padding:20px;
 margin-top:40px;
-background:#111;
-color:#ccc;
 font-size:14px;
 }
 
@@ -106,11 +112,15 @@ font-size:14px;
 @media(max-width:600px){
 
 header h1{
-font-size:26px;
+font-size:28px;
 }
 
 header p{
-font-size:15px;
+font-size:16px;
+}
+
+.tool-card{
+padding:18px;
 }
 
 }
