@@ -1,4 +1,4 @@
-/* Reset */
+/* RESET */
 
 *{
 margin:0;
@@ -7,12 +7,15 @@ box-sizing:border-box;
 font-family: "Segoe UI", Arial, sans-serif;
 }
 
+/* BODY */
+
 body{
 background:#f4f7fb;
 color:#333;
+line-height:1.6;
 }
 
-/* Header */
+/* HEADER */
 
 header{
 background:linear-gradient(135deg,#4e73df,#224abe);
@@ -22,7 +25,7 @@ padding:60px 20px;
 }
 
 header h1{
-font-size:40px;
+font-size:38px;
 margin-bottom:10px;
 }
 
@@ -31,7 +34,7 @@ font-size:18px;
 opacity:0.9;
 }
 
-/* Tools Grid */
+/* TOOL GRID */
 
 .tools{
 max-width:1200px;
@@ -43,7 +46,7 @@ grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:25px;
 }
 
-/* Tool Card */
+/* TOOL CARD */
 
 .tool-card{
 background:white;
@@ -53,7 +56,7 @@ text-decoration:none;
 color:#333;
 
 box-shadow:0 6px 18px rgba(0,0,0,0.08);
-transition:0.3s;
+transition:all 0.3s ease;
 }
 
 .tool-card:hover{
@@ -61,7 +64,7 @@ transform:translateY(-6px);
 box-shadow:0 12px 30px rgba(0,0,0,0.15);
 }
 
-/* Tool Title */
+/* TOOL TITLE */
 
 .tool-card h2{
 font-size:20px;
@@ -69,17 +72,18 @@ margin-bottom:8px;
 color:#4e73df;
 }
 
-/* Tool Text */
+/* TOOL DESCRIPTION */
 
 .tool-card p{
 font-size:14px;
 color:#666;
 }
 
-/* Popular section */
+/* POPULAR TOOLS SECTION */
 
 section{
 margin-top:30px;
+padding:10px 20px;
 }
 
 section h2{
@@ -92,11 +96,10 @@ section p{
 text-align:center;
 max-width:700px;
 margin:auto;
-padding:10px;
 color:#555;
 }
 
-/* Footer */
+/* FOOTER */
 
 footer{
 background:#111;
@@ -107,9 +110,9 @@ margin-top:40px;
 font-size:14px;
 }
 
-/* Mobile */
+/* MOBILE */
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 header h1{
 font-size:28px;
@@ -117,6 +120,10 @@ font-size:28px;
 
 header p{
 font-size:16px;
+}
+
+.tools{
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 }
 
 .tool-card{
