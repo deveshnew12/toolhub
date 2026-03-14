@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image Resizer</title>
+</head>
+
+<body>
+
+<h1>Image Resizer</h1>
+
+<input type="file" id="upload">
+
+<br><br>
+
+<label>Width</label>
+<input type="number" id="width">
+
+<label>Height</label>
+<input type="number" id="height">
+
+<br><br>
+
+<button onclick="resize()">Resize</button>
+
+<br><br>
+
+<canvas id="canvas"></canvas>
+
+<br><br>
+
+<a id="download">Download Image</a>
+
+<script>
+
+let img=new Image()
+
+document.getElementById("upload").addEventListener("change",function(e){
+
+let reader=new FileReader()
+
+reader.onload=function(event){
+img.src=event.target.result
+}
+
+reader.readAsDataURL(e.target.files[0])
+
+})
+
+function resize(){
+
+let canvas=document.getElementById("canvas")
+
+let ctx=canvas.getContext("2d")
+
+let w=document.getElementById("width").value
+let h=document.getElementById("height").value
+
+canvas.width=w
+canvas.height=h
+
+ctx.drawImage(img,0,0,w,h)
+
+let link=document.getElementById("download")
+
+link.href=canvas.toDataURL()
+link.download="resized-image.png"
+
+}
+
+</script>
+
+</body>
+</html>
