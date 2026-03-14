@@ -6,17 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free Online Tools – GST Calculator, EMI Calculator, Image Compressor | ToolHub</title>
+<title>Free Online Tools – ToolHub</title>
 
-<meta name="description" content="Free online tools like GST Calculator, EMI Calculator, Discount Calculator, Word Counter, Image Compressor and PDF tools. Fast and simple tools for everyday use.">
-
-<meta name="keywords" content="free online tools, gst calculator, emi calculator, discount calculator, word counter, image compressor, pdf tools">
-
-<meta name="author" content="ToolHub">
-
-<meta property="og:title" content="ToolHub - Free Online Tools">
-<meta property="og:description" content="Use free calculators, PDF tools and image tools online.">
-<meta property="og:type" content="website">
+<meta name="description" content="Free online calculators, PDF tools and image utilities.">
 
 <link rel="stylesheet" href="style.css">
 
@@ -27,31 +19,51 @@
 <header>
 
 <h1>ToolHub – Free Online Tools</h1>
-<p>
-ToolHub provides free online calculators, PDF tools, and image utilities
-to help with daily tasks quickly and easily.
-</p>
+
+<p>Simple calculators, PDF tools and image tools</p>
+
+<!-- Search bar -->
+
+<input 
+type="text" 
+id="toolSearch" 
+placeholder="Search tools..." 
+onkeyup="searchTools()"
+>
 
 </header>
 
-<section class="tools">
+<!-- Categories -->
 
-<a href="tools/gst-calculator.html" class="tool-card">
+<section class="categories">
+
+<button onclick="filterTools('all')">All</button>
+<button onclick="filterTools('calculator')">Calculators</button>
+<button onclick="filterTools('image')">Image Tools</button>
+<button onclick="filterTools('pdf')">PDF Tools</button>
+
+</section>
+
+<!-- Tools -->
+
+<section class="tools" id="toolsList">
+
+<a href="tools/gst-calculator.html" class="tool-card calculator">
 <h2>GST Calculator</h2>
 <p>Calculate GST quickly</p>
 </a>
 
-<a href="tools/discount-calculator.html" class="tool-card">
+<a href="tools/discount-calculator.html" class="tool-card calculator">
 <h2>Discount Calculator</h2>
 <p>Find final price after discount</p>
 </a>
 
-<a href="tools/emi-calculator.html" class="tool-card">
+<a href="tools/emi-calculator.html" class="tool-card calculator">
 <h2>EMI Calculator</h2>
 <p>Calculate loan EMI</p>
 </a>
 
-<a href="tools/profit-calculator.html" class="tool-card">
+<a href="tools/profit-calculator.html" class="tool-card calculator">
 <h2>Profit Calculator</h2>
 <p>Calculate profit and margin</p>
 </a>
@@ -61,74 +73,78 @@ to help with daily tasks quickly and easily.
 <p>Count words instantly</p>
 </a>
 
-<a href="tools/case-converter.html" class="tool-card">
-<h2>Case Converter</h2>
-<p>Convert text to uppercase or lowercase</p>
-</a>
-
-<a href="tools/image-resizer.html" class="tool-card">
+<a href="tools/image-resizer.html" class="tool-card image">
 <h2>Image Resizer</h2>
 <p>Resize images online</p>
 </a>
 
-<a href="tools/image-compressor.html" class="tool-card">
+<a href="tools/image-compressor.html" class="tool-card image">
 <h2>Image Compressor</h2>
-<p>Reduce image size online</p>
+<p>Reduce image size</p>
 </a>
 
-<a href="tools/merge-pdf.html" class="tool-card">
+<a href="tools/merge-pdf.html" class="tool-card pdf">
 <h2>Merge PDF</h2>
-<p>Combine multiple PDF files</p>
+<p>Combine PDF files</p>
 </a>
 
-<a href="tools/compress-pdf.html" class="tool-card">
+<a href="tools/compress-pdf.html" class="tool-card pdf">
 <h2>Compress PDF</h2>
-<p>Reduce PDF file size</p>
+<p>Reduce PDF size</p>
 </a>
-
-<a href="tools/age-calculator.html" class="tool-card">
-<h2>Age Calculator</h2>
-<p>Calculate your age instantly</p>
-</a>
-
-<a href="tools/percentage-calculator.html" class="tool-card">
-<h2>Percentage Calculator</h2>
-<p>Calculate percentages quickly</p>
-</a>
-
-<a href="tools/password-generator.html" class="tool-card">
-<h2>Password Generator</h2>
-<p>Create strong random passwords</p>
-</a>
-
-<a href="tools/qr-generator.html" class="tool-card">
-<h2>QR Code Generator</h2>
-<p>Create QR codes instantly</p>
-</a>
-
-<a href="tools/random-number.html" class="tool-card">
-<h2>Random Number Generator</h2>
-<p>Generate random numbers easily</p>
-</a>
-
-</section>
-
-<section>
-
-<h2>Popular Tools</h2>
-
-<p>
-Use our free GST calculator, EMI calculator, profit calculator,
-image compressor and PDF tools without installing any software.
-</p>
 
 </section>
 
 <footer>
 
-<p>© 2026 ToolHub | Free Online Tools</p>
+<p>© 2026 ToolHub</p>
 
 </footer>
 
+<script>
+
+/* SEARCH */
+
+function searchTools(){
+
+let input=document.getElementById("toolSearch").value.toLowerCase()
+
+let cards=document.querySelectorAll(".tool-card")
+
+cards.forEach(card=>{
+
+let text=card.innerText.toLowerCase()
+
+card.style.display=text.includes(input)?"block":"none"
+
+})
+
+}
+
+/* FILTER */
+
+function filterTools(type){
+
+let cards=document.querySelectorAll(".tool-card")
+
+cards.forEach(card=>{
+
+if(type=="all"||card.classList.contains(type)){
+
+card.style.display="block"
+
+}else{
+
+card.style.display="none"
+
+}
+
+})
+
+}
+
+</script>
+
 </body>
+
 </html>
